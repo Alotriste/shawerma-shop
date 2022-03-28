@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&family=Fredericka+the+Great&family=Inter:wght@400;500;600;700;800&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'inter', system-ui;
+    background-color: #fbffe7;
+    
+}
+
+* {
+    font-family: 'inter', system-ui;
+}
+
+.wrapper {
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px rgba($color: #000, $alpha: 0.04);
+    border-radius: 20px;
+    max-width: 1080px;
+    margin: 50px auto;
+    
+    .opasity {
+        opacity: 0.4;
+    }
+}
+.withoutScrol{
+    overflow:  hidden;
+}
+header {
+    border-bottom: 1px solid rgb(238, 238, 238);
+
+    .headerLeft {
+
+        img {
+            margin-right: 15px;
+        }
+
+        h3,
+        p {
+            margin: 0;
+        }
+    }
+
+}
+
+.content {
+    h1 {
+        margin: 0;
+    }
+}
+
+
+
+.button {
+    background: #ffffff;
+    border: 1px solid rgb(230, 230, 230);
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    padding-top: 4px;
+}
+
+
+.search-block {
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    padding: 0 15px;
+    position: relative;
+
+    .clear{
+position:absolute;
+right: 10px;
+top: 13px;
+height: 18px;
+width: 18px;
+
+    }
+
+    input {
+        border: 0;
+        padding: 13px;
+        font-size: 16px;
+        width: 200px;
+    }
+}
+
+
+.withoutScrol{
+    overflow: hidden;
+}
+
+
+.overlay-space {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    
+    .drawer {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 420px;
+        height: 100%;
+        right: 0;
+        background: #ffffff;
+        box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+
+        .items {
+            flex: 1;
+            overflow: auto;
+            margin-bottom: 15px;
+
+            .cartItem {
+
+                border: 1px solid rgb(230, 230, 230);
+                border-radius: 20px;
+                overflow: hidden;
+
+                
+
+                p {
+                    font-size: 16px;
+                }
+
+                b {
+                    
+                    font-size: 14px;
+                }
+
+                .removeBtn {
+                    margin-left: 20px;
+                   
+                    opacity: 0.5;
+                    transition: opacity 0.2s ease-in-out;
+
+                    &:hover {
+                        opacity: 1;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+        }
+
+
+        h2 {
+            margin: 0;
+        }
+
+        .cartTotalBlock {
+            li {
+                display: flex;
+                align-items: flex-end;
+                margin-bottom: 20px;
+            }
+
+            div {
+                flex: 1;
+                height: 1px;
+                border-bottom: 1px dashed #dfdfdf;
+                position: relative;
+                top: -4px;
+                margin: 0 7px;
+            }
+        }
+
+        .buy-btn {
+            position: relative;
+            width: 100%;
+            background-color: rgb(76, 162, 71);
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            height: 55px;
+            transition: box-shadow 0.18s ease-in-out, transform 0.18s ease-in-out, background-color 0.18s ease-in-out;
+
+            img {
+                position: absolute;
+                right: 45px;
+                transition: transform 0.3s ease-in-out;
+
+
+            }
+
+            &:hover {
+                box-shadow: 0 5px 20px rgba($color: #000, $alpha: 0.5);
+                transform: translateY(-3px);
+                cursor: pointer;
+                background-color: lighten(rgb(76, 162, 71), 5%);
+
+                img {
+                    transform: translateX(25px);
+                }
+            }
+
+            &:active {
+                background-color: darken(rgb(76, 162, 71), 5%);
+                transform: translateY(1px);
+            }
+        }
+    }
+}
